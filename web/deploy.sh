@@ -1,15 +1,15 @@
-#!/usr/bin/env sh
-
 set -e
 
-# npm run build
+yarn add yarn build
+
+yarn build
 
 cd dist
 
 git init
+
+git config user.name ${GITHUB_USER}
+
 git add -A
 git commit -m 'deploy'
-
-git push -f git@github.com:ahsayde/yapl-playground.git master:gh-pages
-
-cd -
+git push -f https://${GITHUB_TOKEN}@github.com/ahsayde/yapl-playground master:gh-pages

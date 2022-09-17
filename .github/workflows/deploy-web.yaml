@@ -1,0 +1,21 @@
+name: deploy-web
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - web/**
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    env:
+      GITHUB_USER: ${{ github.actor }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+    - run: cd web && bash deploy.sh
+
+        
