@@ -121,7 +121,7 @@ export default {
           dark: true
         },
         skipped: {
-          color: 'grey lighten-5',
+          color: 'grey lighten-3',
           dark: false
         }
       }

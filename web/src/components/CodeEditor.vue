@@ -56,8 +56,7 @@ export default {
       automaticLayout: false,
       overflowWidgetsDomNode: document.querySelector('body'),
       fixedOverflowWidgets: true,
-    })
-  
+    })  
     this.editor.getModel().onDidChangeContent(() => {
       this.content = this.editor.getModel().getValue()
       let errors = monaco.editor.getModelMarkers()
@@ -69,7 +68,6 @@ export default {
     window.onresize =  () =>{
       this.editor.layout();
     };
-  
   }
 };
 </script>
