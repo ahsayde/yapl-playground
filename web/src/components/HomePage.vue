@@ -7,7 +7,7 @@
             <v-toolbar flat dense>
               <v-toolbar-title class="title overline">Policy</v-toolbar-title>
               <v-spacer></v-spacer>
-              <v-btn color="primary" icon tile @click.stop="run">
+              <v-btn color="primary" icon tile @click.stop="run" :disabled="loading">
                 <v-icon>mdi-play</v-icon>
               </v-btn>
             </v-toolbar>
@@ -18,7 +18,7 @@
       <v-divider></v-divider>
       <v-row style="height:34vh">
         <v-col>
-          <v-card flat tile>
+          <v-card flat tile :loading="loading">
             <v-toolbar flat dense>
               <v-toolbar-title class="title overline">Result</v-toolbar-title>
               <v-spacer></v-spacer>
@@ -105,6 +105,7 @@ export default {
       },
       result: null,
       snackbar: false,
+      loading: false,
       status: null,
       statusConfig: {
         passed: {
@@ -146,6 +147,9 @@ export default {
     },
     run() {
       this.saveConfig()
+      this.result = null
+      this.status = null
+      this.loading = true
       fetch(
         "https://ahsayde.me/yapl-playground/api/eval", {
           method: "POST",
@@ -173,6 +177,9 @@ export default {
       })
       .catch(() => {
         this.snackbar = true
+      })
+      .finally(() => {
+        this.loading = false
       })
     }
   },
