@@ -1,5 +1,7 @@
 github.com/ahsayde/yapl v0.1.0 h1:823TcItcLAFyjnM3tz86Ca5yzDhk7jVjmPWuqKdHxAg=
 github.com/ahsayde/yapl v0.1.0/go.mod h1:APsEgSmZVOmQs+IZHPJJxJe/a52NEJPqTMvovZL1zLE=
+github.com/ahsayde/yapl v0.2.0 h1:KlUtNxMdPzybIdyAhvyPxw/XBunEL4zNUiKqjw7aOBI=
+github.com/ahsayde/yapl v0.2.0/go.mod h1:APsEgSmZVOmQs+IZHPJJxJe/a52NEJPqTMvovZL1zLE=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/stretchr/testify v1.8.0 h1:pSgiaMZlXftHpm5L7V1+rVB+AZJydKsMxsQBIJw4PKk=
